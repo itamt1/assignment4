@@ -1,16 +1,15 @@
 body{
     margin: 0px;
-    filter:brightness(0.8)
+    filter:brightness(0.7)
 }
 .main{
     background-color: #050210;
     width: 1000px;
     height: 600px;
     margin: 20px auto;
-
 }
 .first-c{
-    border: 1px solid;
+    border: 1px solid transparent;
     border-radius: 100%;
     width: 300px;
     height: 300px;
@@ -20,17 +19,17 @@ body{
     animation-name: anime;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
-
+    background: linear-gradient(#fb5dad, #55fb9aff,#b97aff);
 }
-.first-c::after{
+.third-c::after{
     content: "";
-    border: 1px solid;
+    border: 1px solid transparent;
     border-radius: 100%;
     width: 250px;
     height: 250px;
     position: absolute;
-    left: 25px;
-    top: 25px;
+    left: 525px;
+    top: 175px;
     animation-name: anim;
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
@@ -38,19 +37,13 @@ body{
 }
 @keyframes anime{
     0%{
-        background: linear-gradient(to top right,#fb5dad 10%, #55fb9aff 25%, #55fb9aaf 35%,#b97aff 45%);
-       box-shadow: 0px 0px 60px 10px #fb5dad;
-
-}
+        transform: rotate(120deg);
+    }
 50%{
-    background: linear-gradient(to bottom right,#fb5dad 10%, #55fb9aff 55%, #55fb9aaf 70%,#b97aff 85%);
-    box-shadow: 0px 0px 60px 10px #55fb9aaf;
-
+    transform: rotate(240deg);
 }
 100%{
-    background: linear-gradient(to top left,#fb5dad 10%, #55fb9aff 80%, #55fb9aaf 85%,#b97aff 90%);
-    box-shadow: 0px 0px 60px 10px #b97aff;
-  
+    transform: rotate(360deg);   
 }
 }
 @keyframes anim{
@@ -66,3 +59,17 @@ body{
    }
 
 }
+.sec-c{
+    border: 1px solid transparent;
+    border-radius: 100%;
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    left: 490px;
+    top: 140px;
+    background: linear-gradient(#fb5dad, #55fb9aff,#b97aff);
+    animation-name: anime;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    filter: blur(25px)
+   }
